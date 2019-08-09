@@ -12,7 +12,7 @@ import (
 )
 
 // EstadoReciboController operations for EstadoRecibo
-
+//ayy jesusito lindo
 type EstadoReciboController struct {
 	beego.Controller
 }
