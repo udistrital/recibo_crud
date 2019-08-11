@@ -1,0 +1,719 @@
+swagger: "2.0"
+info:
+  title: beego Test API
+  description: beego has a very cool tools to autogenerate documents for your API
+  version: 1.0.0
+  termsOfService: http://beego.me/
+  contact:
+    email: astaxie@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+basePath: /v1
+paths:
+  /estado_recibo/:
+    get:
+      tags:
+      - estado_recibo
+      description: get EstadoRecibo
+      operationId: EstadoReciboController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.EstadoRecibo'
+        "403":
+          description: ""
+    post:
+      tags:
+      - estado_recibo
+      description: create EstadoRecibo
+      operationId: EstadoReciboController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for EstadoRecibo content
+        required: true
+        schema:
+          $ref: '#/definitions/models.EstadoRecibo'
+      responses:
+        "201":
+          description: '{int} models.EstadoRecibo'
+        "403":
+          description: body is empty
+  /estado_recibo/{id}:
+    get:
+      tags:
+      - estado_recibo
+      description: get EstadoRecibo by id
+      operationId: EstadoReciboController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.EstadoRecibo'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - estado_recibo
+      description: update the EstadoRecibo
+      operationId: EstadoReciboController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for EstadoRecibo content
+        required: true
+        schema:
+          $ref: '#/definitions/models.EstadoRecibo'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.EstadoRecibo'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - estado_recibo
+      description: delete the EstadoRecibo
+      operationId: EstadoReciboController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /pago_recibo/:
+    get:
+      tags:
+      - pago_recibo
+      description: get PagoRecibo
+      operationId: PagoReciboController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.PagoRecibo'
+        "403":
+          description: ""
+    post:
+      tags:
+      - pago_recibo
+      description: create PagoRecibo
+      operationId: PagoReciboController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for PagoRecibo content
+        required: true
+        schema:
+          $ref: '#/definitions/models.PagoRecibo'
+      responses:
+        "201":
+          description: '{int} models.PagoRecibo'
+        "403":
+          description: body is empty
+  /pago_recibo/{id}:
+    get:
+      tags:
+      - pago_recibo
+      description: get PagoRecibo by id
+      operationId: PagoReciboController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.PagoRecibo'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - pago_recibo
+      description: update the PagoRecibo
+      operationId: PagoReciboController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for PagoRecibo content
+        required: true
+        schema:
+          $ref: '#/definitions/models.PagoRecibo'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.PagoRecibo'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - pago_recibo
+      description: delete the PagoRecibo
+      operationId: PagoReciboController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /recibo/:
+    get:
+      tags:
+      - recibo
+      description: get Recibo
+      operationId: ReciboController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Recibo'
+        "403":
+          description: ""
+    post:
+      tags:
+      - recibo
+      description: create Recibo
+      operationId: ReciboController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Recibo content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Recibo'
+      responses:
+        "201":
+          description: '{int} models.Recibo'
+        "403":
+          description: body is empty
+  /recibo/{id}:
+    get:
+      tags:
+      - recibo
+      description: get Recibo by id
+      operationId: ReciboController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Recibo'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - recibo
+      description: update the Recibo
+      operationId: ReciboController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Recibo content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Recibo'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Recibo'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - recibo
+      description: delete the Recibo
+      operationId: ReciboController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /tipo_pago/:
+    get:
+      tags:
+      - tipo_pago
+      description: get TipoPago
+      operationId: TipoPagoController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoPago'
+        "403":
+          description: ""
+    post:
+      tags:
+      - tipo_pago
+      description: create TipoPago
+      operationId: TipoPagoController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for TipoPago content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoPago'
+      responses:
+        "201":
+          description: '{int} models.TipoPago'
+        "403":
+          description: body is empty
+  /tipo_pago/{id}:
+    get:
+      tags:
+      - tipo_pago
+      description: get TipoPago by id
+      operationId: TipoPagoController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoPago'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - tipo_pago
+      description: update the TipoPago
+      operationId: TipoPagoController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for TipoPago content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoPago'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoPago'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - tipo_pago
+      description: delete the TipoPago
+      operationId: TipoPagoController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /tipo_recibo/:
+    get:
+      tags:
+      - tipo_recibo
+      description: get TipoRecibo
+      operationId: TipoReciboController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoRecibo'
+        "403":
+          description: ""
+    post:
+      tags:
+      - tipo_recibo
+      description: create TipoRecibo
+      operationId: TipoReciboController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for TipoRecibo content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoRecibo'
+      responses:
+        "201":
+          description: '{int} models.TipoRecibo'
+        "403":
+          description: body is empty
+  /tipo_recibo/{id}:
+    get:
+      tags:
+      - tipo_recibo
+      description: get TipoRecibo by id
+      operationId: TipoReciboController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoRecibo'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - tipo_recibo
+      description: update the TipoRecibo
+      operationId: TipoReciboController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for TipoRecibo content
+        required: true
+        schema:
+          $ref: '#/definitions/models.TipoRecibo'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.TipoRecibo'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - tipo_recibo
+      description: delete the TipoRecibo
+      operationId: TipoReciboController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+definitions:
+  models.EstadoRecibo:
+    title: EstadoRecibo
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      CodigoAbreviacion:
+        type: string
+      Descripcion:
+        type: string
+      FechaModificacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      NumeroOrden:
+        type: number
+        format: double
+  models.PagoRecibo:
+    title: PagoRecibo
+    type: object
+    properties:
+      Aprobado:
+        type: boolean
+      Comprobante:
+        type: integer
+        format: int64
+      FechaModificacion:
+        type: string
+        format: datetime
+      FechaPago:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      ReciboId:
+        $ref: '#/definitions/models.Recibo'
+      TipoPagoId:
+        $ref: '#/definitions/models.TipoPago'
+  models.Recibo:
+    title: Recibo
+    type: object
+    properties:
+      EstadoReciboId:
+        $ref: '#/definitions/models.EstadoRecibo'
+      FechaExtraordinaria:
+        type: string
+        format: datetime
+      FechaModificacion:
+        type: string
+        format: datetime
+      FechaOrdinaria:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      Referencia:
+        type: integer
+        format: int64
+      TipoReciboId:
+        $ref: '#/definitions/models.TipoRecibo'
+      ValorExtraordinario:
+        type: integer
+        format: int64
+      ValorOrdinario:
+        type: integer
+        format: int64
+  models.TipoPago:
+    title: TipoPago
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      CodigoAbreviacion:
+        type: string
+      Descripcion:
+        type: string
+      FechaModificacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      NumeroOrden:
+        type: number
+        format: double
+  models.TipoRecibo:
+    title: TipoRecibo
+    type: object
+    properties:
+      Activo:
+        type: boolean
+      CodigoAbreviacion:
+        type: string
+      Descripcion:
+        type: string
+      FechaModificacion:
+        type: string
+        format: datetime
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      NumeroOrden:
+        type: number
+        format: double
+tags:
+- name: estado_recibo
+  description: |
+    EstadoReciboController operations for EstadoRecibo
+- name: pago_recibo
+  description: |
+    PagoReciboController operations for PagoRecibo
+- name: tipo_recibo
+  description: |
+    TipoReciboController operations for TipoRecibo
+- name: recibo
+  description: |
+    ReciboController operations for Recibo
+- name: tipo_pago
+  description: |
+    TipoPagoController operations for TipoPago
