@@ -1,16 +1,16 @@
 kind: pipeline
-name: descuento_academico_crud
+name: recibo_crud
 
 workspace:
   base: /go
   path: src/github.com/planesticud/${DRONE_REPO##planesticud/}
   when:
-    branch: 
+    branch:
     - master
     - develop
     event:
     - push
-    
+
 steps:
 - name: build
   image: golang:1.9
@@ -18,15 +18,15 @@ steps:
   - go get -t
   - GOOS=linux GOARCH=amd64 go build -o main
   - go get -u gopkg.in/alecthomas/gometalinter.v1
-  - gometalinter.v1 --install     
+  - gometalinter.v1 --install
   when:
-    branch: 
+    branch:
     - master
     - develop
     event:
     - push
-            
-- name: publish-dockerhub  
+
+- name: publish-dockerhub
   image: plugins/docker
   settings:
     username:
@@ -38,7 +38,7 @@ steps:
     - ${DRONE_COMMIT:0:7}
     - latest
   when:
-    branch: 
+    branch:
     - master
     - develop
     event:
@@ -54,7 +54,7 @@ steps:
     format: html
     message: >
       {{#success build.status}}
-        <code>{{repo.owner}}/{{repo.name}}</code> <a href="{{build.link}}">SUCCESS</a> 
+        <code>{{repo.owner}}/{{repo.name}}</code> <a href="{{build.link}}">SUCCESS</a>
         <code>{{commit.branch}}</code>@<a href="{{commit.link}}">{{truncate commit.sha 7}}</a>
       {{else}}
         <code>{{repo.owner}}/{{repo.name}}</code> <a href="{{build.link}}">FAILURE</a>
