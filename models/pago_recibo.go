@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/astaxie/beego/orm"
+	"github.com/udistrital/utils_oas/time_bogota"
 )
 
 type PagoRecibo struct {
@@ -15,9 +16,10 @@ type PagoRecibo struct {
 	ReciboId          *Recibo   `orm:"column(recibo_id);rel(fk)"`
 	FechaPago         time.Time `orm:"column(fecha_pago);type(date)"`
 	Aprobado          bool      `orm:"column(aprobado)"`
-	FechaModificacion time.Time `orm:"column(fecha_modificacion);type(timestamp with time zone);auto_now;null"`
 	TipoPagoId        *TipoPago `orm:"column(tipo_pago_id);rel(fk)"`
 	Comprobante       int       `orm:"column(comprobante);null"`
+	FechaCreacion     string    `orm:"column(fecha_creacion);null"`
+	FechaModificacion string    `orm:"column(fecha_modificacion);null"`
 }
 
 func (t *PagoRecibo) TableName() string {
@@ -31,7 +33,8 @@ func init() {
 // AddPagoRecibo insert a new PagoRecibo into database and returns
 // last inserted Id on success.
 func AddPagoRecibo(m *PagoRecibo) (id int64, err error) {
-	m.FechaModificacion = time.Now()
+	m.FechaCreacion = time_bogota.TiempoBogotaFormato()
+	m.FechaModificacion = time_bogota.TiempoBogotaFormato()
 	o := orm.NewOrm()
 	id, err = o.Insert(m)
 	return
@@ -131,7 +134,7 @@ func GetAllPagoRecibo(query map[string]string, fields []string, sortby []string,
 func UpdatePagoReciboById(m *PagoRecibo) (err error) {
 	o := orm.NewOrm()
 	v := PagoRecibo{Id: m.Id}
-	m.FechaModificacion = time.Now()
+	m.FechaModificacion = time_bogota.TiempoBogotaFormato()
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64

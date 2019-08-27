@@ -5,19 +5,20 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-	"time"
 
 	"github.com/astaxie/beego/orm"
+	"github.com/udistrital/utils_oas/time_bogota"
 )
 
 type TipoPago struct {
-	NumeroOrden       float64   `orm:"column(numero_orden)"`
-	Id                int       `orm:"column(id);pk;auto"`
-	Nombre            string    `orm:"column(nombre)"`
-	Descripcion       string    `orm:"column(descripcion)"`
-	CodigoAbreviacion string    `orm:"column(codigo_abreviacion)"`
-	Activo            bool      `orm:"column(activo)"`
-	FechaModificacion time.Time `orm:"column(fecha_modificacion);type(timestamp with time zone);auto_now;null"`
+	NumeroOrden       float64 `orm:"column(numero_orden)"`
+	Id                int     `orm:"column(id);pk;auto"`
+	Nombre            string  `orm:"column(nombre)"`
+	Descripcion       string  `orm:"column(descripcion)"`
+	CodigoAbreviacion string  `orm:"column(codigo_abreviacion)"`
+	Activo            bool    `orm:"column(activo)"`
+	FechaCreacion     string  `orm:"column(fecha_creacion);null"`
+	FechaModificacion string  `orm:"column(fecha_modificacion);null"`
 }
 
 func (t *TipoPago) TableName() string {
@@ -31,7 +32,8 @@ func init() {
 // AddTipoPago insert a new TipoPago into database and returns
 // last inserted Id on success.
 func AddTipoPago(m *TipoPago) (id int64, err error) {
-	m.FechaModificacion = time.Now()
+	m.FechaCreacion = time_bogota.TiempoBogotaFormato()
+	m.FechaModificacion = time_bogota.TiempoBogotaFormato()
 	o := orm.NewOrm()
 	id, err = o.Insert(m)
 	return
@@ -131,7 +133,7 @@ func GetAllTipoPago(query map[string]string, fields []string, sortby []string, o
 func UpdateTipoPagoById(m *TipoPago) (err error) {
 	o := orm.NewOrm()
 	v := TipoPago{Id: m.Id}
-	m.FechaModificacion = time.Now()
+	m.FechaModificacion = time_bogota.TiempoBogotaFormato()
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64
