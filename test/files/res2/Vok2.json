@@ -1,0 +1,14 @@
+{
+  "title": "Example Schema",
+  "type": "object",
+  "properties": {
+    "Id": { "type": "integer" },
+    "Comprobante":	{ "type": "integer" },
+    "ReciboId":	{ "type": "Recibo" },
+    "TipopagoId":	{ "type": "TipoPago" },
+    "Aprobado": { "type": "boolean" },
+    "FechaPago": { "type": "string" },
+    "FechaCreacion": { "type": "string" },
+    "FechaModificacion": { "type": "string" }
+  }
+}

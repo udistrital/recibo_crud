@@ -1,0 +1,6 @@
+projectKey=pl:recibo_crud:0.01
+serverUrl=http://sonarqube.planestic.udistrital.edu.co:9000
+serverVersion=7.0.0.36138
+dashboardUrl=http://sonarqube.planestic.udistrital.edu.co:9000/dashboard/index/pl:recibo_crud:0.01
+ceTaskId=AWz3_2dvm7yxM-XuGrMV
+ceTaskUrl=http://sonarqube.planestic.udistrital.edu.co:9000/api/ce/task?id=AWz3_2dvm7yxM-XuGrMV
