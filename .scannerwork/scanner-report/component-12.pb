@@ -1,0 +1,1 @@
+models/tipo_pago.go 2goX¡hrmodels/tipo_pago.go

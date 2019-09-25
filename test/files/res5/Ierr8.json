@@ -6,7 +6,7 @@
 		"Severity": "ERROR",
 		"Code": "23505",
 		"Message": "llave duplicada viola restricción de unicidad «pk_tipo_recibo»",
-		"Detail": "Ya existe la llave (id)=(12).",
+		"Detail": "Ya existe la llave (id)=(13).",
 		"Hint": "",
 		"Position": "",
 		"InternalPosition": "",
