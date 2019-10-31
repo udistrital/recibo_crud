@@ -1,1 +1,0 @@
-mcontrollers/tipo_recibo.go 2goXÅhrcontrollers/tipo_recibo.go
