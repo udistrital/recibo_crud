@@ -1,1 +1,0 @@
-qcontrollers/tipo_pago.go 2goXÅhrcontrollers/tipo_pago.go
