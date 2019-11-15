@@ -44,7 +44,7 @@ func (m *TablasEsquemaRecibo_20191115_054616) Up() {
 // Reverse the migrations
 func (m *TablasEsquemaRecibo_20191115_054616) Down() {
 	// use m.SQL("DROP TABLE ...") to reverse schema update
-	file, err := ioutil.ReadFile("../scripts/scripts/20191115_054616_tablas_esquema_recibo.down.sql")
+	file, err := ioutil.ReadFile("../scripts/20191115_054616_tablas_esquema_recibo.down.sql")
 
 	if err != nil {
 		// handle error
