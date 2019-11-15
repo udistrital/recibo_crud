@@ -7,7 +7,7 @@ import (
 
 func init() {
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:EstadoReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:EstadoReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:EstadoReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:EstadoReciboController"],
         beego.ControllerComments{
             Method: "Post",
             Router: `/`,
@@ -16,7 +16,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:EstadoReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:EstadoReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:EstadoReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:EstadoReciboController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/`,
@@ -25,7 +25,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:EstadoReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:EstadoReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:EstadoReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:EstadoReciboController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: `/:id`,
@@ -34,7 +34,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:EstadoReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:EstadoReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:EstadoReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:EstadoReciboController"],
         beego.ControllerComments{
             Method: "Put",
             Router: `/:id`,
@@ -43,7 +43,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:EstadoReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:EstadoReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:EstadoReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:EstadoReciboController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/:id`,
@@ -52,7 +52,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:PagoReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:PagoReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:PagoReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:PagoReciboController"],
         beego.ControllerComments{
             Method: "Post",
             Router: `/`,
@@ -61,7 +61,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:PagoReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:PagoReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:PagoReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:PagoReciboController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/`,
@@ -70,7 +70,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:PagoReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:PagoReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:PagoReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:PagoReciboController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: `/:id`,
@@ -79,7 +79,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:PagoReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:PagoReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:PagoReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:PagoReciboController"],
         beego.ControllerComments{
             Method: "Put",
             Router: `/:id`,
@@ -88,7 +88,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:PagoReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:PagoReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:PagoReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:PagoReciboController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/:id`,
@@ -97,7 +97,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:ReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:ReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:ReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:ReciboController"],
         beego.ControllerComments{
             Method: "Post",
             Router: `/`,
@@ -106,7 +106,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:ReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:ReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:ReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:ReciboController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/`,
@@ -115,7 +115,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:ReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:ReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:ReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:ReciboController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: `/:id`,
@@ -124,7 +124,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:ReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:ReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:ReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:ReciboController"],
         beego.ControllerComments{
             Method: "Put",
             Router: `/:id`,
@@ -133,7 +133,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:ReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:ReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:ReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:ReciboController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/:id`,
@@ -142,7 +142,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoPagoController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoPagoController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoPagoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoPagoController"],
         beego.ControllerComments{
             Method: "Post",
             Router: `/`,
@@ -151,7 +151,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoPagoController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoPagoController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoPagoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoPagoController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/`,
@@ -160,7 +160,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoPagoController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoPagoController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoPagoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoPagoController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: `/:id`,
@@ -169,7 +169,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoPagoController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoPagoController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoPagoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoPagoController"],
         beego.ControllerComments{
             Method: "Put",
             Router: `/:id`,
@@ -178,7 +178,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoPagoController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoPagoController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoPagoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoPagoController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/:id`,
@@ -187,7 +187,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoReciboController"],
         beego.ControllerComments{
             Method: "Post",
             Router: `/`,
@@ -196,7 +196,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoReciboController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/`,
@@ -205,7 +205,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoReciboController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: `/:id`,
@@ -214,7 +214,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoReciboController"],
         beego.ControllerComments{
             Method: "Put",
             Router: `/:id`,
@@ -223,7 +223,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoReciboController"] = append(beego.GlobalControllerRouter["github.com/planesticud/recibo_crud/controllers:TipoReciboController"],
+    beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoReciboController"] = append(beego.GlobalControllerRouter["github.com/udistrital/recibo_crud/controllers:TipoReciboController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/:id`,
