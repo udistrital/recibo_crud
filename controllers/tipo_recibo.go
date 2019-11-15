@@ -7,7 +7,7 @@ import (
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
-	"github.com/planesticud/recibo_crud/models"
+	"github.com/udistrital/recibo_crud/models"
 )
 
 // TipoReciboController operations for TipoRecibo
