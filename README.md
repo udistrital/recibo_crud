@@ -4,7 +4,6 @@ API para gestión de recibos para Campus Virtual
 Integración con
 
  - `CI`
- - `AWS Lambda - S3`
  - `Drone 1.x`
  - `recibo_crud master/develop`
 
@@ -14,7 +13,7 @@ Go version >= 1.8.
 ## Preparación
 Para usar el API, usar el comando:
 
- - `go get github.com/planesticud/recibo_crud`
+ - `go get github.com/udistrital/recibo_crud`
 
 ## Ejecución
 Definir los valores de las siguientes variables de entorno:
@@ -30,4 +29,4 @@ Definir los valores de las siguientes variables de entorno:
 RECIBO_CRUD_HTTP_PORT=8113 RECIBO_CRUD__PGUSER=user RECIBO_CRUD__PGPASS=password RECIBO_CRUD__PGURLS=localhost RECIBO_CRUD__PGDB=bd RECIBO_CRUD__SCHEMA=schema_new bee run
 
 ## Modelo BD
-![image](https://github.com/planesticud/recibo_crud/blob/develop/modelo_recibo_crud.png).
+![image](https://github.com/udistrital/recibo_crud/blob/feature/campus/modelo_recibo_crud.png).
