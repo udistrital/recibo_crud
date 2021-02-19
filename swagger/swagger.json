@@ -67,8 +67,8 @@
                             "$ref": "#/definitions/models.EstadoRecibo"
                         }
                     },
-                    "403": {
-                        "description": ""
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -93,8 +93,8 @@
                     "201": {
                         "description": "{int} models.EstadoRecibo"
                     },
-                    "403": {
-                        "description": "body is empty"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             }
@@ -122,8 +122,8 @@
                             "$ref": "#/definitions/models.EstadoRecibo"
                         }
                     },
-                    "403": {
-                        "description": ":id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -158,8 +158,8 @@
                             "$ref": "#/definitions/models.EstadoRecibo"
                         }
                     },
-                    "403": {
-                        "description": ":id is not int"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             },
@@ -182,8 +182,8 @@
                     "200": {
                         "description": "{string} delete success!"
                     },
-                    "403": {
-                        "description": "id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             }
@@ -240,8 +240,8 @@
                             "$ref": "#/definitions/models.PagoRecibo"
                         }
                     },
-                    "403": {
-                        "description": ""
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -266,8 +266,8 @@
                     "201": {
                         "description": "{int} models.PagoRecibo"
                     },
-                    "403": {
-                        "description": "body is empty"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             }
@@ -295,8 +295,8 @@
                             "$ref": "#/definitions/models.PagoRecibo"
                         }
                     },
-                    "403": {
-                        "description": ":id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -331,8 +331,8 @@
                             "$ref": "#/definitions/models.PagoRecibo"
                         }
                     },
-                    "403": {
-                        "description": ":id is not int"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             },
@@ -355,8 +355,8 @@
                     "200": {
                         "description": "{string} delete success!"
                     },
-                    "403": {
-                        "description": "id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             }
@@ -413,8 +413,8 @@
                             "$ref": "#/definitions/models.Recibo"
                         }
                     },
-                    "403": {
-                        "description": ""
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -439,8 +439,8 @@
                     "201": {
                         "description": "{int} models.Recibo"
                     },
-                    "403": {
-                        "description": "body is empty"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             }
@@ -468,8 +468,8 @@
                             "$ref": "#/definitions/models.Recibo"
                         }
                     },
-                    "403": {
-                        "description": ":id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -504,8 +504,8 @@
                             "$ref": "#/definitions/models.Recibo"
                         }
                     },
-                    "403": {
-                        "description": ":id is not int"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             },
@@ -528,8 +528,8 @@
                     "200": {
                         "description": "{string} delete success!"
                     },
-                    "403": {
-                        "description": "id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             }
@@ -586,8 +586,8 @@
                             "$ref": "#/definitions/models.TipoPago"
                         }
                     },
-                    "403": {
-                        "description": ""
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -612,8 +612,8 @@
                     "201": {
                         "description": "{int} models.TipoPago"
                     },
-                    "403": {
-                        "description": "body is empty"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             }
@@ -641,8 +641,8 @@
                             "$ref": "#/definitions/models.TipoPago"
                         }
                     },
-                    "403": {
-                        "description": ":id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -677,8 +677,8 @@
                             "$ref": "#/definitions/models.TipoPago"
                         }
                     },
-                    "403": {
-                        "description": ":id is not int"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             },
@@ -701,8 +701,8 @@
                     "200": {
                         "description": "{string} delete success!"
                     },
-                    "403": {
-                        "description": "id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             }
@@ -759,8 +759,8 @@
                             "$ref": "#/definitions/models.TipoRecibo"
                         }
                     },
-                    "403": {
-                        "description": ""
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -785,8 +785,8 @@
                     "201": {
                         "description": "{int} models.TipoRecibo"
                     },
-                    "403": {
-                        "description": "body is empty"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             }
@@ -814,8 +814,8 @@
                             "$ref": "#/definitions/models.TipoRecibo"
                         }
                     },
-                    "403": {
-                        "description": ":id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             },
@@ -850,8 +850,8 @@
                             "$ref": "#/definitions/models.TipoRecibo"
                         }
                     },
-                    "403": {
-                        "description": ":id is not int"
+                    "400": {
+                        "description": "the request contains incorrect syntax"
                     }
                 }
             },
@@ -874,8 +874,8 @@
                     "200": {
                         "description": "{string} delete success!"
                     },
-                    "403": {
-                        "description": "id is empty"
+                    "404": {
+                        "description": "not found resource"
                     }
                 }
             }
@@ -895,9 +895,11 @@
                 "Descripcion": {
                     "type": "string"
                 },
+                "FechaCreacion": {
+                    "type": "string"
+                },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -923,9 +925,11 @@
                     "type": "integer",
                     "format": "int64"
                 },
+                "FechaCreacion": {
+                    "type": "string"
+                },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaPago": {
                     "type": "string",
@@ -950,13 +954,15 @@
                 "EstadoReciboId": {
                     "$ref": "#/definitions/models.EstadoRecibo"
                 },
+                "FechaCreacion": {
+                    "type": "string"
+                },
                 "FechaExtraordinaria": {
                     "type": "string",
                     "format": "datetime"
                 },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "FechaOrdinaria": {
                     "type": "string",
@@ -996,9 +1002,11 @@
                 "Descripcion": {
                     "type": "string"
                 },
+                "FechaCreacion": {
+                    "type": "string"
+                },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -1026,9 +1034,11 @@
                 "Descripcion": {
                     "type": "string"
                 },
+                "FechaCreacion": {
+                    "type": "string"
+                },
                 "FechaModificacion": {
-                    "type": "string",
-                    "format": "datetime"
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",

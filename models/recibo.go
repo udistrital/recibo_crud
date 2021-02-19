@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/astaxie/beego/orm"
+	"github.com/udistrital/utils_oas/time_bogota"
 )
 
 type Recibo struct {
@@ -19,7 +20,8 @@ type Recibo struct {
 	FechaExtraordinaria time.Time     `orm:"column(fecha_extraordinaria);type(date);null"`
 	ValorOrdinario      int           `orm:"column(valor_ordinario)"`
 	ValorExtraordinario int           `orm:"column(valor_extraordinario);null"`
-	FechaModificacion 	time.Time 	  `orm:"column(fecha_modificacion);type(timestamp with time zone);auto_now;null"`
+	FechaCreacion       string        `orm:"column(fecha_creacion);null"`
+	FechaModificacion   string        `orm:"column(fecha_modificacion);null"`
 }
 
 func (t *Recibo) TableName() string {
@@ -33,7 +35,8 @@ func init() {
 // AddRecibo insert a new Recibo into database and returns
 // last inserted Id on success.
 func AddRecibo(m *Recibo) (id int64, err error) {
-	m.FechaModificacion = time.Now()
+	m.FechaCreacion = time_bogota.TiempoBogotaFormato()
+	m.FechaModificacion = time_bogota.TiempoBogotaFormato()
 	o := orm.NewOrm()
 	id, err = o.Insert(m)
 	return
@@ -133,11 +136,11 @@ func GetAllRecibo(query map[string]string, fields []string, sortby []string, ord
 func UpdateReciboById(m *Recibo) (err error) {
 	o := orm.NewOrm()
 	v := Recibo{Id: m.Id}
-	m.FechaModificacion = time.Now()
+	m.FechaModificacion = time_bogota.TiempoBogotaFormato()
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64
-		if num, err = o.Update(m); err == nil {
+		if num, err = o.Update(m, "Referencia", "TipoReciboId", "EstadoReciboId", "FechaOrdinaria", "FechaExtraordinaria", "ValorOrdinario", "ValorExtraordinario", "FechaModificacion"); err == nil {
 			fmt.Println("Number of records updated in database:", num)
 		}
 	}

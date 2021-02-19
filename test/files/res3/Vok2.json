@@ -1,0 +1,16 @@
+{
+  "title": "Example Schema",
+  "type": "object",
+  "properties": {
+    "Id": { "type": "integer" },
+    "Referencia":	{ "type": "integer" },
+    "EstadoReciboId":	{ "type": "EstadoRecibo" },
+    "TipoReciboId":	{ "type": "TipoRecibo" },
+    "ValorOrdinario":	{ "type": "integer" },
+    "ValorExtraordinario":	{ "type": "integer" },
+    "FechaOrdinaria": { "type": "string" },
+    "FechaExtraordinaria": { "type": "string" },
+    "FechaCreacion": { "type": "string" },
+    "FechaModificacion": { "type": "string" }
+  }
+}
