@@ -13,7 +13,8 @@ import (
 
 type Recibo struct {
 	Id                  int           `orm:"column(id);pk;auto"`
-	Referencia          int           `orm:"column(referencia);null"`
+	Referencia          string        `orm:"column(referencia);null"`
+	TerceroId           int           `orm:"column(tercero_id)"`
 	TipoReciboId        *TipoRecibo   `orm:"column(tipo_recibo_id);rel(fk)"`
 	EstadoReciboId      *EstadoRecibo `orm:"column(estado_recibo_id);rel(fk)"`
 	FechaOrdinaria      time.Time     `orm:"column(fecha_ordinaria);type(date)"`
@@ -140,7 +141,7 @@ func UpdateReciboById(m *Recibo) (err error) {
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64
-		if num, err = o.Update(m, "Referencia", "TipoReciboId", "EstadoReciboId", "FechaOrdinaria", "FechaExtraordinaria", "ValorOrdinario", "ValorExtraordinario", "FechaModificacion"); err == nil {
+		if num, err = o.Update(m, "Referencia", "TerceroId", "TipoReciboId", "EstadoReciboId", "FechaOrdinaria", "FechaExtraordinaria", "ValorOrdinario", "ValorExtraordinario", "FechaModificacion"); err == nil {
 			fmt.Println("Number of records updated in database:", num)
 		}
 	}

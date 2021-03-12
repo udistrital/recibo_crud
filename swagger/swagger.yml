@@ -652,6 +652,8 @@ definitions:
         type: integer
         format: int64
       Referencia:
+        type: string
+      TerceroId:
         type: integer
         format: int64
       TipoReciboId:
